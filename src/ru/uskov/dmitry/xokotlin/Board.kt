@@ -1,17 +1,17 @@
 package ru.uskov.dmitry.xokotlin
 
-class Board(private val size: Int) {
+class Board(private val size: Int = 3) {
 
     private val table: Array<Array<Symbol>>
     private var winner: Symbol? = null
     private var end: Boolean = false
 
     /**
-     * throw IllegalArgumentException if SIZE < 1
+     * throw IllegalArgumentException if size < 1
      */
     init {
         if (size < 1) {
-            throw IllegalArgumentException("Board SIZE should be > 0. Actual value: $size")
+            throw IllegalArgumentException("Board size should be > 0. Actual value: $size")
         }
         this.table = Array(size) { Array(size) { Symbol.EMPTY } }
     }

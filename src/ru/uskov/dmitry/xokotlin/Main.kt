@@ -1,9 +1,7 @@
 package ru.uskov.dmitry.xokotlin
 
-private const val SIZE = 3 //you can set board size here (size should be > 0)
-
 fun main(arg: Array<String>) {
-    val board = Board(SIZE)
+    val board = Board()
     val symbolSupplier = SymbolSupplier()
     var symbol = symbolSupplier.next()
     do {
